@@ -1,0 +1,42 @@
+GET http://localhost:8080/api/products
+Authorization: 
+
+###
+
+POST http://localhost:8080/api/auth/login
+Content-Type: application/x-www-form-urlencoded
+
+email=johndoe@gmail.com
+&password=hello
+
+###
+POST http://localhost:8080/api/auth/forgot-password
+Content-Type: application/x-www-form-urlencoded
+
+email=johndoe@gmail.com
+
+
+###
+POST http://localhost:8080/api/auth/verify-code
+Content-Type: application/x-www-form-urlencoded
+
+email=johndoe@gmail.com
+&code=4321
+
+###
+POST http://localhost:8080/api/auth/reset-password
+Content-Type: application/x-www-form-urlencoded
+
+email=johndoe@gmail.com
+&code=4321
+&password=helloworld
+&confirmPassword=helloworld
+
+###
+GET http://localhost:8080/api/users/wishlist/6570a688169b4c1f88ad71d3
+Authorization: 
+
+
+###
+PATCH  http://localhost:8080/api/users/6570a688169b4c1f88ad71d3
+Authorization: 
